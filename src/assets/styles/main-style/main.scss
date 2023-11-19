@@ -1,0 +1,45 @@
+//IMPORT SERVICES
+@import '../services-style/services.scss';
+//IMPORT BLOCK STYLES
+
+//IMPORT MAIN-PAGE BLOCKS
+@import '../block-styles/main-page/navigation-styles/nav.scss';
+@import '../block-styles/main-page/header-styles/header.scss';
+@import '../block-styles/main-page/design-styles/design.scss';
+@import '../block-styles/main-page/combination-styles/combination.scss';
+@import '../block-styles/main-page/photos-styles/photos.scss';
+@import '../block-styles/main-page/runline-styles/runline.scss';
+@import '../block-styles/main-page/highPlace-styles/highPlace.scss';
+@import '../block-styles/main-page/module-styles/module.scss';
+@import '../block-styles/main-page/house-elements-styles/house-elements.scss';
+@import '../block-styles/main-page/magnetic-styles/magnetic.scss';
+@import '../block-styles/main-page/gallery-styles/gallery.scss';
+@import '../block-styles/main-page/comments-styles/comments.scss';
+@import '../block-styles/main-page/care-styles/care.scss';
+@import '../block-styles/main-page/instruction-styles/instruction.scss';
+@import '../block-styles/main-page/safely-styles/safely.scss';
+@import '../block-styles/main-page/complex-styles/complex.scss';
+@import '../block-styles/main-page/social-styles/social.scss';
+@import '../block-styles/main-page/footer-styles/footer.scss';
+@import '../block-styles/main-page/complexItem-styles/complexItem.scss';
+
+//@IMPORT CART-PAGE STYLES
+@import '../block-styles/cart-page/cart-top-styles/cart-top.scss';
+@import '../block-styles/cart-page/cart-bottom-styles/cart-bottom.scss';
+
+//@IMPORT CATALOG-PAGE STYLES
+
+@import '../block-styles/catalog-page/catalog-header-styles/catalog-header.scss';
+@import '../block-styles/catalog-page/catalog-items-styles/catalog-items.scss';
+
+//@IMPORT GALLERY-PAGE STYLES
+@import '../block-styles/gallery-page/gallery-page.scss';
+
+//@IMPORT ANSWERS-PAGE STYLES
+@import '../block-styles/answer-page/answer-page.scss';
+
+//@IMPORT GUARAMTEE-PAGE STYLES
+@import '../block-styles/guarantee-page/guarantee-page.scss';
+
+//@IMPORT CONTACT-PAGE STYLES
+@import '../block-styles/contact-page/contact-page.scss';

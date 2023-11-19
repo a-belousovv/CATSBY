@@ -1,0 +1,32 @@
+.module-system {
+	@include standartBlock(0px 0px 0px 75px);
+	@media (max-width: $media-m) {
+		padding: 0px;
+	}
+	.module__box {
+		background-color: $blockBg;
+		width: 100%;
+		@include standartFlex(row, center, center);
+		gap: 40px;
+		padding: 0px 80px 0px 0px;
+		border-radius: 30px;
+		@media (max-width: $media-m) {
+			@include standartFlex(column-reverse, center, center);
+			padding: 50px 30px;
+		}
+		.module__img {
+			width: 50%;
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
+		}
+		.module__content {
+			width: 50%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 20px;
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+.guarantee-page {
+	@include standartBlock(75px 0px);
+	.guarantee__box {
+		width: 100%;
+		@include standartFlex(column, center, flex-start);
+		gap: 30px;
+		.guarantee__text {
+			font-family: $roboto;
+			font-size: $px18;
+		}
+		.guarantee__list {
+			width: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 15px;
+			margin-left: 45px;
+			&_item {
+				&::marker {
+					font-family: $roboto;
+					font-size: $px20;
+				}
+				.guarantee__list_title {
+					font-family: $roboto;
+					font-size: $px20;
+					padding-bottom: 10px;
+				}
+				.guarantee__count_list {
+					@include standartFlex(column, flex-start, flex-start);
+					margin-left: 40px;
+					gap: 7px;
+					.guarantee__count_item {
+						font-family: $roboto;
+						font-size: $px18;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}

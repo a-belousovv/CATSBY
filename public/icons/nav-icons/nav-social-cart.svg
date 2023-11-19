@@ -1,0 +1,6 @@
+<svg class="js-basket" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#333333" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.23039 18.5156C9.075 18.5156 8.96424 18.6664 9.01069 18.8147L12.1506 28.8374C12.1807 28.9334 12.2696 28.9988 12.3703 28.9988H20.1366H20.4115H28.1778C28.2784 28.9988 28.3674 28.9334 28.3975 28.8374L31.5374 18.8147C31.5838 18.6664 31.4731 18.5156 31.3177 18.5156H20.4115H20.1366H9.23039Z" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M13 18.0347C13.2194 17.8682 17.1146 13.9422 19.0347 12" stroke-width="1.6" stroke-linecap="round"></path>
+<path d="M26.7949 18.0347C26.6068 17.8682 23.2681 13.9422 21.6223 12" stroke-width="1.6" stroke-linecap="round"></path>
+<circle class="js-basket-full" cx="27" cy="30" r="7" stroke="none" fill="#FF7B52" display="none" style="display: none;"></circle>
+</svg>

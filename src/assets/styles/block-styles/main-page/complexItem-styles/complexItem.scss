@@ -1,0 +1,483 @@
+.complexItem {
+	@include standartBlock(75px 0px);
+	&__button-return {
+		@include standartFlex(row, center, flex-start);
+		position: relative;
+		padding-left: 15px;
+		margin-bottom: 20px;
+		cursor: pointer;
+		width: 3%;
+		&:hover {
+			&::before {
+				border-left: 1.5px solid $lightorange;
+				border-top: 1.5px solid $lightorange;
+			}
+			.complexItem__button_title-return {
+				color: $lightorange;
+				&::after {
+					background-color: $lightorange;
+				}
+			}
+		}
+
+		&::before {
+			content: '';
+			border-left: 1.5px solid gray;
+			border-top: 1.5px solid gray;
+			height: 9px;
+			width: 9px;
+			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: rotate(-45deg);
+			transform-origin: 0 0;
+			transition: 0.3s;
+		}
+
+		.complexItem__button_title-return {
+			font-family: $roboto;
+			font-size: $px18;
+			font-weight: 400;
+			position: relative;
+			transition: 0.3s;
+			text-decoration: none;
+			color: black;
+			&::after {
+				content: '';
+				width: 100%;
+				height: 1px;
+				background-color: gray;
+				position: absolute;
+				left: 0;
+				bottom: -5px;
+				transition: 0.3s;
+			}
+		}
+	}
+	&__box {
+		width: 100%;
+		@include standartFlex(row, flex-start, space-between);
+		position: relative;
+		height: 100%;
+		@media (max-width: $media-m) {
+			@include standartFlex(column, flex-start, space-between);
+		}
+		.complexItem__left {
+			width: 65%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 20px;
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
+			.complexItem__header {
+				width: 100%;
+				@include standartFlex(row, center, flex-start);
+				&_title {
+					font-size: $px48;
+					font-family: $roboto;
+					font-weight: 500;
+				}
+			}
+			.complexItem__content {
+				width: 100%;
+				@include standartFlex(row, flex-start, flex-start);
+				gap: 30px;
+				@media (max-width: $media-m) {
+					overflow: hidden;
+				}
+				&_slider {
+					width: 20%;
+					height: 100%;
+					max-width: 60px;
+					@include standartFlex(column, flex-start, flex-start);
+					gap: 15px;
+					position: relative;
+					overflow: scroll;
+					max-height: 600px;
+					@media (max-width: $media-m) {
+						@include standartFlex(row, flex-start, flex-start);
+						height: 100%;
+						max-width: 100000%;
+						width: 100%;
+						overflow-x: scroll;
+						max-height: 100%;
+					}
+					.complex__slider_item {
+						width: 100%;
+						height: 60px;
+						cursor: pointer;
+						@media (max-width: $media-m) {
+							display: block;
+							width: 100%;
+							height: 100%;
+						}
+						img {
+							width: 100%;
+							height: 100%;
+							display: block;
+							border-radius: 10px;
+						}
+					}
+				}
+				&_img {
+					width: 60%;
+					height: 600px;
+					max-width: 579px;
+					object-fit: cover;
+					@media (max-width: $media-m) {
+						display: none;
+					}
+					img {
+						width: 100%;
+						height: 100%;
+						display: block;
+						border-radius: 4px;
+					}
+				}
+				&_colors {
+					width: 30%;
+					max-width: 220px;
+					@include standartFlex(column, flex-start, flex-start);
+					gap: 15px;
+					.complexItem__colors_title {
+						font-family: $roboto;
+						font-size: 18px;
+						font-weight: 500;
+					}
+					.complexItem__colors_items {
+						width: 100%;
+						@include standartFlex(row, center, flex-start);
+						gap: 15px;
+						flex-wrap: wrap;
+						.complexItem__items_item {
+							width: 30%;
+							max-width: 48px;
+							height: 48px;
+							border: 1.5px solid rgba(black, 0);
+							cursor: pointer;
+
+							&.active {
+								padding: 1.5px;
+								border: 1.5px solid $lightorange;
+								border-radius: 50%;
+							}
+							img {
+								width: 100%;
+								height: 100%;
+								display: block;
+							}
+						}
+					}
+				}
+				&_characteristics {
+					width: 100%;
+					@include standartFlex(column, flex-start, flex-start);
+					gap: 20px;
+					.complexItem__characteristics_title {
+						font-size: $px36;
+						font-family: $roboto;
+						font-weight: 500;
+					}
+					.complexItem__characteristics_item {
+						width: 100%;
+						@include standartFlex(row, flex-start, flex-start);
+						gap: 30px;
+						.complexItem__item_title {
+							font-size: $px16;
+							font-weight: 400;
+							font-family: $roboto;
+						}
+						.complexItem__item_text {
+							font-size: $px14;
+							font-weight: 400;
+							font-family: $roboto;
+						}
+					}
+				}
+				&_info {
+					width: 100%;
+					@include standartFlex(column, flex-start, flex-start);
+					gap: 20px;
+					overflow: hidden;
+					.complexItem__info_title {
+						font-size: $px36;
+						font-family: $roboto;
+						font-weight: 500;
+					}
+					.complexItem__info_imgs {
+						width: 100%;
+						@include standartFlex(row, flex-start, flex-start);
+						@media (max-width: $media-m) {
+							width: 100%;
+							overflow-x: scroll;
+							@include standartFlex(row, flex-start, flex-start);
+						}
+
+						gap: 3px;
+						.complexItem__img_left {
+							width: 100%;
+							height: 848px;
+							max-height: 848px;
+							@media (max-width: $media-m) {
+								width: auto;
+							}
+							img {
+								width: 100%;
+								height: 100%;
+								display: block;
+							}
+						}
+						.complexItem__img_right {
+							width: 100%;
+							height: 100%;
+							max-height: 848px;
+							@include standartFlex(column, flex-start, flex-start);
+							gap: 4.5px;
+							@media (max-width: $media-m) {
+								width: 100%;
+								height: 848px;
+								@include standartFlex(row, flex-start, flex-start);
+							}
+							.complex__right_item {
+								width: 100%;
+								height: 100%;
+								@include standartFlex(row, flex-start, flex-start);
+								gap: 4px;
+								&.two {
+									@media (max-width: $media-m) {
+										width: 100%;
+										height: 100%;
+									}
+									img {
+										width: 50%;
+										height: 390px;
+										@media (max-width: $media-m) {
+											width: 100%;
+											height: 100%;
+										}
+									}
+								}
+								&.three {
+									img {
+										width: 33%;
+										max-height: 259px;
+										height: 259px;
+										@media (max-width: $media-m) {
+											width: 100%;
+											height: 100%;
+											max-height: 100%;
+										}
+									}
+								}
+								&.four {
+									img {
+										width: 24.6%;
+										max-height: 190px;
+										height: 190px;
+										@media (max-width: $media-m) {
+											width: 100%;
+											height: 100%;
+											max-height: 100%;
+										}
+									}
+								}
+							}
+						}
+					}
+					.complexItem__info_texts {
+						width: 100%;
+						@include standartFlex(column, flex-start, flex-start);
+						gap: 10px;
+						.complexItem__texts_text {
+							font-size: $px18;
+							font-family: $roboto;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+		.complexItem__right {
+			width: 30%;
+			height: 1770px;
+			position: relative;
+			padding-top: 70px;
+			@media (max-width: $media-m) {
+				width: 100%;
+				height: auto;
+			}
+			&_sidebar {
+				width: 100%;
+				max-width: 316px;
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 0px;
+				position: sticky;
+				top: 20%;
+				.complex__sidebar_header {
+					.complexItem__sidebar_title {
+						font-size: 40px;
+						font-weight: 500;
+						font-family: $roboto;
+						padding-bottom: 10px;
+						@media (max-width: $media-m) {
+							font-size: $px18;
+						}
+					}
+					.complexItem__sidebar_title-discount {
+						font-size: $px24;
+						font-weight: 400;
+						font-family: $roboto;
+						color: #ababab;
+						position: relative;
+						@media (max-width: $media-m) {
+							font-size: $px14;
+						}
+						&::after {
+							content: '';
+							width: 60%;
+							height: 1px;
+							background-color: red;
+							position: absolute;
+							top: 50%;
+							left: 0;
+							transform: translateY(50%);
+							opacity: 0.8;
+							@media (max-width: $media-m) {
+								width: 80%;
+							}
+						}
+					}
+				}
+				.complexItem__sidebar_isThere {
+					@include standartFlex(row, center, flex-start);
+					gap: 10px;
+					padding: 20px 0px;
+					.complexItem__isThere_title {
+						color: #388e3c;
+						font-family: $roboto;
+						font-size: $px16;
+						font-weight: 400;
+					}
+				}
+				.complexItem__sidebar_cart-button {
+					background-color: $lightorange;
+					border-radius: 10px;
+					font-size: $px16;
+					font-family: $roboto;
+					font-weight: 400;
+					color: $white;
+					border: none;
+					outline: none;
+					padding: 16px 24px;
+					width: 100%;
+					cursor: pointer;
+					@media (max-width: $media-m) {
+						width: 80%;
+					}
+				}
+				.complexItem__sidebar_buttonSomeItems {
+					width: 100%;
+					@include standartFlex(row, center, center);
+					gap: 20px;
+					.complexItem__someItems_minus {
+						width: 30px;
+						height: 20px;
+						position: relative;
+						cursor: pointer;
+
+						&::after {
+							content: '';
+							width: 100%;
+							height: 2px;
+							background-color: $black;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+						}
+					}
+					.complexItem__someItem_count {
+						background-color: #003f0e;
+						width: 100%;
+						color: $white;
+						padding: 12px 20px;
+						@include standartFlex(row, center, center);
+						border-radius: 10px;
+						font-family: $roboto;
+						font-size: $px14;
+					}
+					.complexItem__someItems_plus {
+						width: 30px;
+						height: 20px;
+						position: relative;
+						cursor: pointer;
+						&::after {
+							content: '';
+							width: 100%;
+							height: 2px;
+							background-color: $black;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+						}
+						&::before {
+							content: '';
+							width: 2px;
+							height: 100%;
+							background-color: $black;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+						}
+					}
+				}
+				.complexItem__sidebar_info {
+					padding-top: 30px;
+					@include standartFlex(column, flex-start, flex-start);
+					gap: 10px;
+
+					.complexItem__info_item {
+						width: 100%;
+						@include standartFlex(row, center, flex-start);
+						gap: 10px;
+						.complexItem__item_title {
+							font-size: $px14;
+							font-weight: 400;
+							font-family: $roboto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.complex-slider-buttons {
+	width: fit-content;
+	height: fit-content;
+	&__top {
+		width: 30px;
+		height: 30px;
+		border-top: 3px solid black;
+		border-left: 3px solid black;
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 100;
+		transform: rotate(45deg);
+		transform-origin: 0 0;
+	}
+	&__bottom {
+		width: 30px;
+		height: 30px;
+		border-bottom: 3px solid black;
+		border-left: 3px solid black;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+	}
+}

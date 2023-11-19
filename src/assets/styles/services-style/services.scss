@@ -1,0 +1,125 @@
+//NULLING STYLES
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+//EVERYTHING STYLES
+
+html {
+	scroll-behavior: smooth;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+body {
+	&.hide {
+		overflow: hidden;
+	}
+}
+
+.block-container {
+	width: 85%;
+	margin: 0 auto;
+	max-width: 1320px;
+}
+.nav-container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+.block-title-orange {
+	color: #ff7b52;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+}
+.block-subtitle {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 40px;
+	@media (max-width: 768px) {
+		font-size: 30px;
+	}
+}
+.block-text {
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	@media (max-width: 768px) {
+		font-size: 18px;
+	}
+}
+
+.block-title-bg-gray {
+	font-size: 48px;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	@media (max-width: 768px) {
+		font-size: 30px;
+	}
+}
+
+.page-title {
+	font-family: 'Roboto', sans-serif;
+	font-size: 48px;
+	font-weight: 400;
+	letter-spacing: 10px;
+	@media (max-width: 1000px) {
+		font-size: 30px;
+	}
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	display: none;
+	&::after {
+		font-size: 0px;
+		display: none;
+	}
+}
+//MIXINS
+
+@mixin standartBlock($padding) {
+	width: 100%;
+	height: fit-content;
+	padding: $padding;
+}
+
+@mixin standartFlex($direction: row, $align: flex-start, $justify: flex-start) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+//VARIABLES
+$roboto: 'Roboto', sans-serif;
+
+$px12: 12px;
+$px14: 14px;
+$px16: 16px;
+$px18: 18px;
+$px20: 20px;
+$px24: 24px;
+$px30: 30px;
+$px36: 36px;
+$px48: 48px;
+$px64: 64px;
+
+$lightorange: #ff7b52;
+$lightgray: #333;
+$white: white;
+$black: black;
+$blockBg: #f5f5f5;
+
+$media-s: 360px;
+$media-m: 1000px;
+$media-l: 1440px;

@@ -1,0 +1,53 @@
+.safely {
+	@include standartBlock(75px 0px);
+	&__box {
+		width: 100%;
+		@include standartFlex(row, flex-start, center);
+		gap: 40px;
+		height: 459px;
+		@media (max-width: 1200px) {
+			height: auto;
+			@include standartFlex(column, flex-start, center);
+		}
+		.safely__header {
+			width: 50%;
+			height: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			border-radius: 30px;
+			background-color: $blockBg;
+			padding: 38px 60px;
+			gap: 30px;
+			@media (max-width: 1200px) {
+				width: 100%;
+				padding: 18px 30px;
+			}
+			.safely__img_title {
+				color: #61c36b;
+				font-family: $roboto;
+				font-size: 20px;
+				font-weight: 500;
+			}
+			&_title {
+				font-size: $px48;
+				@media (max-width: $media-m) {
+					font-size: $px30;
+				}
+			}
+		}
+		.safely__content {
+			width: 50%;
+			height: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			border-radius: 30px;
+			background-color: $blockBg;
+			padding: 38px 60px;
+			@media (max-width: 1200px) {
+				width: 100%;
+				padding: 18px 30px;
+			}
+			&_text {
+				font-size: 26px;
+			}
+		}
+	}
+}

@@ -1,0 +1,93 @@
+.contact-page {
+	@include standartBlock(75px 0px);
+	&__box {
+		width: 100%;
+		@include standartFlex(column, center, flex-start);
+		gap: 30px;
+		.contact__items {
+			width: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 15px;
+			&_item {
+				width: 100%;
+				@include standartFlex(row, center, flex-start);
+				gap: 5px;
+				@media (max-width: $media-m) {
+					@include standartFlex(column, flex-start, flex-start);
+				}
+				.contact__item_title {
+					font-family: $roboto;
+					font-size: $px20;
+					font-weight: 600;
+				}
+				.contact__item_text {
+					font-family: $roboto;
+					font-size: $px18;
+					font-weight: 400;
+				}
+			}
+			.contact__item_img {
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 10px;
+				max-width: $media-l;
+				.contact__img_description {
+					color: #888;
+					font-size: $px14;
+					font-family: $roboto;
+					font-weight: 400;
+				}
+			}
+		}
+		.contact__props {
+			width: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 10px;
+			&_title {
+				font-family: $roboto;
+				font-size: $px36;
+				font-weight: 500;
+			}
+			&_text {
+				padding-left: 10px;
+				font-family: $roboto;
+				font-size: $px18;
+				font-weight: 400;
+			}
+			&_subtitle {
+				font-family: $roboto;
+				font-size: $px20;
+				font-weight: 500;
+			}
+		}
+		.contact__vacancies {
+			width: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 10px;
+			&_title {
+				font-family: $roboto;
+				font-size: $px36;
+				font-weight: 500;
+			}
+			&_text {
+				font-family: $roboto;
+				font-size: $px20;
+				font-weight: 400;
+				a {
+					text-decoration: none;
+					color: $black;
+					position: relative;
+					margin-bottom: 4px;
+					&::after {
+						content: '';
+						width: 100%;
+						height: 1px;
+						background-color: $black;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+}

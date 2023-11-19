@@ -1,0 +1,58 @@
+.gallery {
+	@include standartBlock(75px 0px);
+	overflow-x: scroll;
+	&__box {
+		width: 100%;
+		height: 820px;
+		@include standartFlex(row, flex-start, flex-start);
+		gap: 10px;
+		@media (max-width: $media-l) {
+			width: 150vw;
+		}
+		@media (max-width: $media-m) {
+			width: 200vw;
+		}
+		@media (max-width: 600px) {
+			width: 300vw;
+		}
+		@media (max-width: 400px) {
+			width: 350vw;
+		}
+		.gallery__column {
+			width: 14%;
+			height: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 10px;
+			@media (max-width: $media-m) {
+				width: 20%;
+			}
+			.gallery__row {
+				width: 100%;
+				@include standartFlex(row, center, center);
+				gap: 10px;
+				&.two {
+					width: 100%;
+					height: 127px;
+				}
+				&.one {
+					width: 100%;
+					height: 267px;
+				}
+				&_item {
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: relative;
+					img {
+						width: 100%;
+						height: 100%;
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+}

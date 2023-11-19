@@ -1,0 +1,90 @@
+.answer__items {
+	@include standartBlock(75px 0px);
+	&_box {
+		width: 100%;
+		@include standartFlex(column, center, flex-start);
+		gap: 30px;
+	}
+	&_content {
+		width: 100%;
+		@include standartFlex(column, flex-start, flex-start);
+		gap: 30px;
+		.answer__item_title {
+			font-size: $px30;
+			font-family: $roboto;
+			font-weight: 400;
+			position: relative;
+			padding-bottom: 3px;
+			color: $black;
+			text-decoration: none;
+			@media (max-width: $media-m) {
+				font-size: $px24;
+			}
+			&::after {
+				content: '';
+				width: 100%;
+				height: 1px;
+				background-color: $lightgray;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+}
+
+.answer-item {
+	@include standartBlock(75px 0px);
+	&__box {
+		width: 100%;
+		@include standartFlex(column, flex-start, flex-start);
+		gap: 15px;
+		.answer-item__return {
+			font-family: $roboto;
+			font-size: $px18;
+			font-weight: 400;
+			position: relative;
+			transition: 0.3s;
+			text-decoration: none;
+			color: black;
+			padding-left: 15px;
+			&::after {
+				content: '';
+				width: 90%;
+				height: 1px;
+				background-color: $lightgray;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+			&::before {
+				border-left: 1.5px solid $black;
+				border-top: 1.5px solid $black;
+				content: '';
+				height: 9px;
+				left: 0;
+				position: absolute;
+				top: 50%;
+				transform: rotate(-45deg);
+				transform-origin: 0 0;
+				width: 9px;
+			}
+		}
+		.answer-item__title {
+			font-size: $px48;
+			font-family: $roboto;
+			font-weight: 500;
+			@media (max-width: $media-m) {
+				font-size: $px24;
+			}
+		}
+		.answer-item__text {
+			font-size: $px18;
+			font-family: $roboto;
+			font-weight: 400;
+		}
+		.answer-item__img {
+			width: 100%;
+		}
+	}
+}

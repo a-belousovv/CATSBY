@@ -1,0 +1,131 @@
+.catalog__items {
+	@include standartBlock(20px 0px);
+	&_box {
+		width: 100%;
+		@include standartFlex(column, flex-start, flex-start);
+		gap: 30px;
+		.catalog__items_header {
+			width: 100%;
+			@include standartFlex(row, center, flex-start);
+			gap: 40px;
+			@media (max-width: $media-m) {
+				@include standartFlex(column, center, flex-start);
+			}
+			.catalog__header_item {
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 15px;
+				.catalog__item_title {
+					font-weight: 600;
+					font-family: $roboto;
+					font-size: $px18;
+				}
+				.catalog__item_colors {
+					@include standartFlex(row, center, flex-start);
+					gap: 15px;
+					.catalog__colors_item {
+						width: 48px;
+						height: 48px;
+						border: 2px solid rgba($black, 0);
+						border-radius: 50%;
+						padding: 2px;
+						cursor: pointer;
+						&:hover {
+							border: 2px solid gray;
+							border-radius: 50%;
+							padding: 2px;
+						}
+						&.active {
+							border: 2px solid $lightorange;
+							border-radius: 50%;
+							padding: 2px;
+						}
+						img {
+							width: 100%;
+							height: 100%;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		.catalog__items_content {
+			width: 100%;
+			@include standartFlex(row, flex-start, space-between);
+			flex-wrap: wrap;
+			@media (max-width: $media-m) {
+				gap: 60px;
+			}
+			.catalog__content_item {
+				width: 30%;
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 30px;
+				text-decoration: none;
+				transition: 0.3s;
+				&:hover {
+					box-shadow: 3px 3px 50px -20px rgb(209, 209, 209);
+					border-radius: 5px;
+					.catalog__item_img {
+						width: 100%;
+						height: 100%;
+						img {
+							border-radius: 5px 5px 0px 0px;
+						}
+					}
+				}
+				@media (max-width: $media-m) {
+					width: 100%;
+				}
+				.catalog__item_img {
+					width: 100%;
+					height: 100%;
+					img {
+						border-radius: 5px;
+					}
+				}
+				.catalog__item_content {
+					width: 100%;
+					@include standartFlex(column, flex-start, flex-start);
+					gap: 20px;
+					padding: 0px 0px 15px 15px;
+					.catalog__content_header {
+						width: 100%;
+						@include standartFlex(row, flex-end, flex-start);
+						gap: 10px;
+
+						.catalog__header_title {
+							font-size: $px18;
+							font-weight: 500;
+							font-family: $roboto;
+							color: $black;
+							text-decoration: none;
+							&.discount {
+								font-size: $px14;
+								font-weight: 400;
+								color: #ababab;
+								position: relative;
+								&::after {
+									content: '';
+									width: 110%;
+									height: 1px;
+									background-color: red;
+									position: absolute;
+									left: -5px;
+									opacity: 0.7;
+									top: 50%;
+								}
+							}
+						}
+					}
+					.catalog__content_info {
+						.catalog__info_text {
+							font-size: 15px;
+							font-weight: 400;
+							font-family: $roboto;
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,161 @@
+.complex {
+	@include standartBlock(75px 0px);
+	&__box {
+		width: 100%;
+		@include standartFlex(column, flex-start, flex-start);
+		gap: 50px;
+		.complex__title {
+			font-size: $px48;
+			font-family: $roboto;
+			font-weight: 500;
+		}
+		.complex__buttons {
+			width: 40%;
+			@include standartFlex(row, center, flex-start);
+			gap: 20px;
+			@media (max-width: $media-m) {
+				@include standartFlex(column, flex-start, space-between);
+			}
+			&_item {
+				width: 50%;
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 10px;
+				@media (max-width: $media-m) {
+					width: 100%;
+				}
+				.complex__item_title {
+					font-family: $roboto;
+					font-size: 20px;
+					font-weight: 500;
+				}
+				.complex__item_colors {
+					@include standartFlex(row, flex-start, flex-start);
+					gap: 15px;
+					.complex__colors_color {
+						width: 48px;
+						height: 48px;
+						padding: 2px;
+						cursor: pointer;
+
+						border: 2px solid rgba(#000000, 0);
+						border-radius: 50%;
+						padding: 2px;
+
+						&:hover {
+							border: 2px solid gray;
+							border-radius: 50%;
+							padding: 2px;
+						}
+						&.active {
+							border: 2px solid $lightorange;
+							border-radius: 50%;
+						}
+						img {
+							width: 100%;
+							height: 100%;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		.complex__items {
+			width: 100%;
+			@include standartFlex(row, center, center);
+			flex-wrap: wrap;
+			gap: 30px;
+
+			&_item {
+				@include standartFlex(column, flex-start, flex-start);
+				width: 30%;
+				cursor: pointer;
+				transition: 0.3s;
+				text-decoration: none;
+				@media (max-width: $media-m) {
+					width: 40%;
+				}
+				&:hover {
+					box-shadow: 3px 3px 50px -20px rgb(209, 209, 209);
+					border-radius: 5px;
+
+					.complex__item_img {
+						img {
+							border-radius: 5px 5px 0px 0px;
+						}
+					}
+				}
+				.complex__item_img {
+					width: 100%;
+					height: 100%;
+					img {
+						display: block;
+						width: 100%;
+						height: 100%;
+						border-radius: 5px;
+					}
+				}
+				.complex__item_content {
+					width: 100%;
+					padding: 15px;
+					@include standartFlex(column, flex-start, flex-start);
+					gap: 7px;
+					background-color: $white;
+					border-radius: 0px 0px 5px 5px;
+
+					.complex__item_header {
+						width: 100%;
+						@include standartFlex(row, flex-end, flex-start);
+						gap: 20px;
+						@media (max-width: $media-m) {
+							gap: 10px;
+						}
+						.complex__header_title {
+							font-size: 23px;
+							font-weight: 500;
+							font-family: $roboto;
+							color: $black;
+							@media (max-width: $media-m) {
+								font-size: $px18;
+							}
+							&.discount {
+								position: relative;
+								font-size: 17px;
+								font-weight: 400;
+								color: #ababab;
+								@media (max-width: $media-m) {
+									font-size: $px14;
+								}
+								&::after {
+									content: '';
+									width: 110%;
+									height: 1px;
+									background-color: red;
+									position: absolute;
+									left: -5px;
+									opacity: 0.7;
+									top: 50%;
+								}
+							}
+						}
+					}
+					.complex__item_payment {
+						.complex__payment_title {
+							font-size: 15px;
+							color: #777;
+							font-family: $roboto;
+							font-weight: 400;
+						}
+					}
+					.complex__item_info {
+						.complex__info_text {
+							font-size: 15px;
+							font-weight: 400;
+							font-family: $roboto;
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+}

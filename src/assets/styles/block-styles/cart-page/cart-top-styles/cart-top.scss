@@ -1,0 +1,218 @@
+.cart {
+	width: 100%;
+	&-empty {
+		width: 100%;
+		@include standartFlex(column, center, center);
+		gap: 20px;
+		&__title {
+			font-family: $roboto;
+			font-size: $px48;
+			@media (max-width: $media-m) {
+				font-size: $px30;
+			}
+		}
+		&__img {
+			width: 20%;
+		}
+	}
+}
+.cart-top {
+	@include standartBlock(45px 0px);
+	&__box {
+		width: 100%;
+		@include standartFlex(row, flex-start, flex-start);
+		gap: 50px;
+		@media (max-width: $media-m) {
+			@include standartFlex(column, flex-start, flex-start);
+		}
+		.cart-top__left {
+			width: 75%;
+			@include standartFlex(column, flex-start, flex-start);
+			gap: 30px;
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
+			.cart-top__path {
+				@include standartFlex(row, center, flex-start);
+				gap: 5px;
+				width: 100%;
+				&_title {
+					font-family: $roboto;
+					font-size: $px12;
+					font-weight: 500;
+					opacity: 0.4;
+				}
+			}
+			.cart-top__header {
+				@include standartFlex(row, center, flex-start);
+				width: 100%;
+				&_title {
+					font-family: $roboto;
+					font-size: $px36;
+					font-weight: 600;
+					opacity: 0.7;
+				}
+			}
+			.cart-top__items {
+				width: 100%;
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 50px;
+				height: 600px;
+				overflow: scroll;
+				@media (max-width: $media-m) {
+					width: 80%;
+				}
+				&_item {
+					width: 100%;
+					max-height: 200px;
+					height: fit-content;
+					@include standartFlex(row, flex-start, flex-start);
+					gap: 40px;
+					@media (max-width: $media-m) {
+						max-height: 100%;
+						max-width: 500px;
+						@include standartFlex(column, flex-start, flex-start);
+					}
+					.cart-top__item_img {
+						width: 200px;
+						height: 100%;
+						img {
+							width: 100%;
+							height: 100%;
+							display: block;
+						}
+					}
+					.cart-top__item_content {
+						width: 100%;
+						height: 200px;
+						@include standartFlex(column, flex-end, space-between);
+						@media (max-width: $media-m) {
+							gap: 10px;
+						}
+						.cart-top__content_top {
+							width: 100%;
+							@include standartFlex(column, flex-start, flex-start);
+							gap: 15px;
+							.cart-top__top_header {
+								width: 100%;
+								@include standartFlex(row, center, space-between);
+								.cart-top__header_title {
+									font-size: $px24;
+									font-weight: 600;
+									font-family: $roboto;
+									opacity: 0.7;
+									span {
+										opacity: 0.4;
+									}
+								}
+								.cart-top__header_button-close {
+									width: 40px;
+									height: 40px;
+									background-color: #efefef;
+									border-radius: 50%;
+									@include standartFlex(row, center, center);
+									opacity: 0.5;
+									cursor: pointer;
+									img {
+										width: 60%;
+									}
+								}
+							}
+							.cart-top__top_content {
+								.cart-top__content_text {
+									font-family: $roboto;
+									font-size: $px16;
+									font-family: 400;
+									opacity: 0.6;
+								}
+							}
+						}
+						.cart-top__content_bottom {
+							@include standartFlex(row, center, flex-end);
+							width: 100%;
+							gap: 40px;
+							.cart-top__bottom_counter {
+								@include standartFlex(row, center, center);
+								gap: 15px;
+								.cart-top__counter_button {
+									background-color: #efefef;
+									border-radius: 50%;
+									width: 40px;
+									height: 40px;
+									@include standartFlex(row, center, center);
+									cursor: pointer;
+									opacity: 0.4;
+									&.active {
+										opacity: 1;
+									}
+								}
+								.cart-top__bottom_count {
+									font-family: $roboto;
+									font-size: $px12;
+									font-weight: 400;
+									opacity: 0.6;
+								}
+							}
+							.cart-top__bottom_price {
+								font-family: $roboto;
+								font-size: $px24;
+								font-weight: 500;
+								opacity: 0.6;
+							}
+						}
+					}
+				}
+			}
+		}
+		.cart-top__right {
+			width: 25%;
+			background-color: #efefef;
+			padding: 24px 24px 33px 24px;
+			height: 100%;
+			max-height: 368px;
+			border-radius: 25px;
+			margin-top: 10%;
+			@media (max-width: $media-m) {
+				width: 100%;
+			}
+			&_payment {
+				width: 100%;
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 15px;
+				.cart-top__payment_totalCount {
+					width: 100%;
+					@include standartFlex(row, center, flex-start);
+					.cart-top__totalCount_title {
+						font-family: $roboto;
+						font-size: $px18;
+						font-weight: 700;
+						opacity: 0.7;
+					}
+				}
+				.cart-top__payment_totalSum {
+					width: 100%;
+					@include standartFlex(row, center, flex-start);
+					.cart-top__totalSum_title {
+						font-family: $roboto;
+						font-size: $px24;
+						opacity: 0.7;
+					}
+				}
+				.cart-top__payment_button-accept {
+					width: 100%;
+					background-color: #ffe155;
+					border-radius: 20px;
+					padding: 10px 10px;
+					@include standartFlex(row, center, center);
+					border: none;
+					outline: none;
+					font-family: $roboto;
+					font-size: $px18;
+					text-decoration: none;
+					color: $black;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

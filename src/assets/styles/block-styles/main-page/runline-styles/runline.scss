@@ -1,0 +1,91 @@
+.runline {
+	@include standartBlock(75px 0px);
+	&__box {
+		width: 100%;
+		@include standartFlex(column, center, center);
+		overflow: hidden;
+		gap: 40px;
+		.runline__content {
+			width: 100%;
+			@include standartFlex(column, flex-start, flex-start);
+
+			&_item {
+				width: 100%;
+				@include standartFlex(row, center, flex-start);
+				gap: 30px;
+				&.right {
+					animation: 20s 0s linear infinite runningLineToRight;
+				}
+				&.left {
+					animation: 20s 0s linear infinite runningLineToLeft;
+				}
+				.runline__item_title {
+					font-size: 100px;
+					font-family: $roboto;
+					font-weight: 700;
+					color: $black;
+					opacity: 0.2;
+					@media (max-width: $media-l) {
+						font-size: $px64;
+					}
+					@media (max-width: $media-m) {
+						font-size: $px48;
+					}
+					@media (max-width: $media-s) {
+						font-size: $px36;
+					}
+				}
+			}
+		}
+		.runline__info {
+			width: 100%;
+			@include standartFlex(row, center, center);
+			gap: 30px;
+			@media (max-width: $media-m) {
+				@include standartFlex(column, flex-start, flex-start);
+			}
+			&_item {
+				width: 45%;
+				height: 100%;
+				@include standartFlex(column, flex-start, flex-start);
+				@media (max-width: $media-m) {
+					width: 100%;
+				}
+				.runline__item_title {
+					font-family: $roboto;
+					font-size: $px30;
+					font-weight: 400;
+					color: $lightgray;
+					span {
+						color: $black;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes runningLineToRight {
+	0% {
+		transform: translateX(0%);
+	}
+	50% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes runningLineToLeft {
+	0% {
+		transform: translateX(-50%);
+	}
+	50% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}

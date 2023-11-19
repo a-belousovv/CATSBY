@@ -1,0 +1,115 @@
+.instruction {
+	@include standartBlock(75px 0px 300px 0px);
+	@media (max-width: $media-m) {
+		padding: 75px 0px 100px 0px;
+	}
+	&__box {
+		@include standartFlex(row, flex-start, space-between);
+		gap: 60px;
+		height: 100%;
+		@media (max-width: $media-m) {
+			@include standartFlex(column, flex-start, space-between);
+		}
+		.instruction__animation {
+			width: 50%;
+			position: relative;
+			padding-top: 70%;
+			@media (max-width: $media-m) {
+				width: 100%;
+				padding-top: 150%;
+			}
+			&_img-instruction {
+				width: auto;
+				height: 25%;
+				position: absolute;
+				left: 50%;
+				top: 0%;
+				transform: translate(-50%, -50%);
+				background-color: #e7e7e7;
+				z-index: 100;
+				transition: 3s;
+				animation: instructionAnimInstruction 5s infinite;
+			}
+			&_img-screwdriver {
+				width: 25px;
+				height: 20%;
+				position: absolute;
+				top: 25%;
+				left: 15%;
+				z-index: 100;
+				transition: 3s;
+				animation: instructionAnimScrewdriver 5s infinite;
+			}
+			&_img-wrench {
+				width: 31px;
+				height: 20%;
+				position: absolute;
+				top: 25%;
+				left: 80%;
+				z-index: 100;
+				transition: 3s;
+				animation: instructionAnimWrench 5s infinite;
+			}
+			&_img-box {
+				position: absolute;
+				height: auto;
+				bottom: 0%;
+				&.front {
+					z-index: 1000;
+				}
+			}
+		}
+		.instruction__content {
+			width: 50%;
+			@include standartFlex(column, flex-start, center);
+			gap: 500px;
+			@media (max-width: $media-m) {
+				width: 100%;
+				gap: 40px;
+			}
+			&_item {
+				@include standartFlex(column, flex-start, flex-start);
+				gap: 20px;
+				.instruction__item_text {
+					font-size: 18px;
+					font-family: $roboto;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}
+
+@keyframes instructionAnimInstruction {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	50% {
+		transform: translate(-50%, 290%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
+@keyframes instructionAnimWrench {
+	0% {
+		transform: translate(0, 0) rotate(0);
+	}
+	50% {
+		transform: translate(-500%, 260%) rotate(45deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(0);
+	}
+}
+@keyframes instructionAnimScrewdriver {
+	0% {
+		transform: translate(0, 0) rotate(0);
+	}
+	50% {
+		transform: translate(500%, 260%) rotate(-45deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(0);
+	}
+}
