@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
 const Comments: React.FC = () => {
-	const [windowScroll, setWindowScroll] = useState(0)
-
-	useEffect(() => {
-		window.addEventListener('scroll', () => {
-			setWindowScroll(window.scrollY)
-		})
-	}, [window.scrollY])
 	return (
 		<div className='comments'>
 			<div className='block-container'>
