@@ -1,4 +1,3 @@
-import React from 'react'
 import Navigation from '../../components/blocks/Navigation/Navigation'
 import Footer from '../../components/blocks/Footer/Footer'
 import Social from '../../components/blocks/Block-Social/Social'

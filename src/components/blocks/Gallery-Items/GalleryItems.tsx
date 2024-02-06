@@ -1,5 +1,3 @@
-import React from 'react'
-
 const GalleryItems = () => {
 	return (
 		<div className='gallery-page'>
