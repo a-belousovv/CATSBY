@@ -2662,25 +2662,25 @@ const initialState = {
 	],
 	materialArray: [
 		{
-			src: '/public/pictures/combination/inputs/oak-natural.png',
+			src: '/pictures/combination/inputs/oak-natural.png',
 			id: 'input-oak-natural',
 		},
 		{
-			src: '/public/pictures/combination/inputs/oak-light.png',
+			src: '/pictures/combination/inputs/oak-light.png',
 			id: 'input-oak-light',
 		},
 		{
-			src: '/public/pictures/combination/inputs/oak-dark.png',
+			src: '/pictures/combination/inputs/oak-dark.png',
 			id: 'input-oak-dark',
 		},
 	],
 	cabelArray: [
 		{
-			src: '/public/pictures/combination/inputs/rope-white.png',
+			src: '/pictures/combination/inputs/rope-white.png',
 			id: 'input-roke-white',
 		},
 		{
-			src: '/public/pictures/combination/inputs/rope-black.png',
+			src: '/pictures/combination/inputs/rope-black.png',
 			id: 'input-roke-black',
 		},
 	],
